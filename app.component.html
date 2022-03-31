@@ -1,0 +1,35 @@
+<h1>Password generator</h1>
+
+<div>
+  <label>Enter Length </label>
+  <input (input)="onChangeLength($event)" />
+</div>
+
+<div>
+  <label> Use Letters </label>
+  <input (change)="onChangeUseLetters()" type="checkbox" />
+</div>
+
+<div>
+  <label>Use Numbers </label>
+  <input (change)="onChangeIncludeNumbers()" type="checkbox" />
+</div>
+
+<div>
+  <label>Use Symbols </label>
+  <input (change)="onChangeUseSymbols()" type="checkbox" />
+</div>
+
+<div>
+  <!-- EVENT BINDING SINTAX -->
+  <button (click)="onButtonClicked()">Generate!</button>
+</div>
+
+<div>
+  <label>your Password</label>
+  <!-- PROPERTY BINDING SINTAX -->
+  <input [value]="this.password" />
+</div>
+
+<!-- INTERPOLATION SINTAX -->
+{{ getName() }}
